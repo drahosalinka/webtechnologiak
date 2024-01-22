@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Napsugar Kávézó</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="server.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="menu">
+            <a href="homepage.html">Kezdőlap</a>
+            <a href="menu.html">Kínálatunk</a>
+            <a href="seasonal.html">Szezonális</a>
+            <a href="competition.html">Verseny</a>
+        </div>
+
+        <div id="content">
+            <div>
+                <h2>A Napsugár Díj</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="form-container">
+                <form>
+                    <div class="flex-container">
+                        <label for="textInput1">Ital neve:</label>
+                        <input type="text" id="textInput1" required>
+                    </div>
+                
+            
+                    <div class="radio-group">
+                        <label for="radioInput1">Hideg</label>
+                        <input type="radio" id="radioInput1">
+                        <label for="radioInput2">Meleg</label>
+                        <input type="radio" id="radioInput2">
+                    </div>
+            
+                    <div class="checkbox-group">
+                        <label for="checkboxInput1">Csokis</label>
+                        <input type="checkbox" id="checkboxInput1">
+                        <label for="checkboxInput2">Gyümölcsös</label>
+                        <input type="checkbox" id="checkboxInput2">
+                        <label for="checkboxInput3">Magvas</label>
+                        <input type="checkbox" id="checkboxInput3">
+                        <label for="checkboxInput4">Alkoholos</label>
+                        <input type="checkbox" id="checkboxInput4">
+                        <label for="checkboxInput5">Karamellás</label>
+                        <input type="checkbox" id="checkboxInput5">
+                        <label for="checkboxInput6">Kókuszos</label>
+                        <input type="checkbox" id="checkboxInput6">
+                    </div>
+            
+                    <div>
+                        <label for="colorInput">Színvilág</label>
+                        <input type="color" id="colorInput">
+                    </div>
+
+                    <label for="textareaInput">Egyéb leírás az italról:</label>
+                    <textarea id="textareaInput" rows="4" required></textarea>
+
+                    <div>
+                        <label for="textInput2">Jelentkező neve</label>
+                        <input type="text" id="textInput2" required>
+                    </div>
+            
+                    <div>
+                        <label for="dateInput">Születési ideje</label>
+                        <input type="date" id="dateInput">
+                    </div>
+            
+                    <button type="submit">Küldés</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

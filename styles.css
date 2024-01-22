@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('hatter.jpg') center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: flex-start;
+}
+
+#menu {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    border-radius: 10px;
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#menu a {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+#button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+#menu a:hover {
+    color: greenyellow;
+}
+
+#content {
+    text-align: center;
+    margin-top: 50px;
+    width: 60%;
+}
+
+#content div {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+#content-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Két oszlop egy sorban */
+    grid-template-rows: auto; /* Automatikusan növekszik a tartalom magasságához */
+    gap: 20px; /* Üres tér a tartalom körül */
+    padding: 20px;
+    justify-content: center; /* Vízszintes középre igazítás az összes elemre */
+}
+
+#title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    grid-column: 1 / span 2; /* A cím átmegy mindkét oszlopra */
+}
+
+#text {
+    font-size: 16px;
+    grid-column: 2; /* A szöveg a második oszlopban helyezkedik el */
+    text-align: left;
+}
+
+#image {
+    max-width: 100%;
+    height: auto;
+    grid-column: 1; /* A kép az első oszlopban helyezkedik el */
+    align-self: center; /* Vízszintes középre igazítás a saját oszlopban */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Elmosás és árnyékolás a kép körül */
+    border-radius: 10px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+textarea,
+input[type="color"],
+input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+}
+
+.flex-container {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.flex-container label {
+    width: 48%;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.radio-group label {
+    margin-right: 20px;
+}
+
+.checkbox-group {
+    margin-bottom: 16px;
+}
+
+.checkbox-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+textarea {
+    width: 300px;
+}
