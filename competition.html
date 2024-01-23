@@ -27,7 +27,7 @@
                       Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
             <div class="form-container">
-                <form>
+                <form onsubmit="return validateForm()">
                     <div class="flex-container">
                         <label for="textInput1">Ital neve:</label>
                         <input type="text" id="textInput1" required>
@@ -58,7 +58,7 @@
             
                     <div>
                         <label for="colorInput">Színvilág</label>
-                        <input type="color" id="colorInput">
+                        <input type="color" id="colorInput" required>
                     </div>
 
                     <label for="textareaInput">Egyéb leírás az italról:</label>
@@ -71,7 +71,7 @@
             
                     <div>
                         <label for="dateInput">Születési ideje</label>
-                        <input type="date" id="dateInput">
+                        <input type="date" id="dateInput" required>
                     </div>
             
                     <button type="submit">Küldés</button>

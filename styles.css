@@ -101,7 +101,7 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: left;
-    height: 100vh;
+    height: auto;
     background-color: #f0f0f0;
 }
 
