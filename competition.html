@@ -7,6 +7,88 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="server.js"></script>
+    <style>
+        .form-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: left;
+            height: auto;
+            background-color: #f0f0f0;
+        }
+        
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        input[type="text"],
+        textarea,
+        input[type="color"],
+        input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 16px;
+            height: 35px;
+        }
+        
+        .flex-container label {
+            width: 48%;
+        }
+        
+        .radio-group {
+            margin-bottom: 16px;
+        }
+        
+        .radio-group label {
+            margin-right: 20px;
+        }
+        
+        .checkbox-group {
+            margin-bottom: 16px;
+        }
+        
+        .checkbox-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        textarea {
+            width: 300px;
+        }
+
+        table {
+            width: 60%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            border: 2px solid #000000;
+            align-self: center;
+        }
+
+        th, td {
+            border: 1px solid #000000;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: yellowgreen;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #bbbbbb;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,20 +97,70 @@
             <a href="homepage.html">Kezdőlap</a>
             <a href="menu.html">Kínálatunk</a>
             <a href="seasonal.html">Szezonális</a>
-            <a href="competition.html">Verseny</a>
+            <a href="competition.html">Napsugár Díj</a>
         </div>
 
         <div id="content">
             <div>
                 <h2>A Napsugár Díj</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>A Napsugár Díj 2402-ben immár nyolc éve jelenti számunkra a minőség, a kreativitás és a varázslat tökéletes összhangját. Díjunkra bárki jelentkezhet, aki érzi magában
+                    a szárnyalásra való hajlamot. A Napsugár Díj elnyeréséhez egy több fordulós verseny vezet, ahol versenyzőink bemutathatják az általuk készített kávékülönlegességeiket döntőbíráinknak.
+                    A verseny végeztével a nyertes kézhez kapja a Napsugár Díjat egy életre szóló napsugár kuponnal együtt, és nyertes itala felkerül állandó kínálatunkba.
+                </p>
+            </div>
+            <div>
+                <h2>Korábbi nyerteseink</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Évszám</th>
+                            <th>Nyertes Versenyző</th>
+                            <th>Nyertes Ital</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2395</td>
+                            <td>Gyöngyös Boróka</td>
+                            <td>Rózsaszirom kávé</td>
+                        </tr>
+                        <tr>
+                            <td>2396</td>
+                            <td>Felhő Atlasz</td>
+                            <td>Fellegek felett</td>
+                        </tr>
+                        <tr>
+                            <td>2397</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2398</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2399</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2400</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2402</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="form-container">
                 <form onsubmit="return validateForm()">
-                    <div class="flex-container">
+                    <h2>Jelentkezem</h2>
+                    <div>
                         <label for="textInput1">Ital neve:</label>
                         <input type="text" id="textInput1" required>
                     </div>
@@ -46,7 +178,7 @@
                         <input type="checkbox" id="checkboxInput1">
                         <label for="checkboxInput2">Gyümölcsös</label>
                         <input type="checkbox" id="checkboxInput2">
-                        <label for="checkboxInput3">Magvas</label>
+                        <label for="checkboxInput3">Csonthéjas (mogyorós, diós, mandulás...)</label>
                         <input type="checkbox" id="checkboxInput3">
                         <label for="checkboxInput4">Alkoholos</label>
                         <input type="checkbox" id="checkboxInput4">
