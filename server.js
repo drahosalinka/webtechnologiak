@@ -29,70 +29,49 @@ function submitForm() {
     resultText += `<p>Jelentkező neve: ${formData.jelentkezoNeve}</p>`;
     resultText += `<p>Születési idő: ${formData.szuletesiIdo}</p>`;
 
-    //$('#resultArea').html(resultText);
+    $('#resultArea').html(resultText);
 
     alert('A form sikeresen leadva!');
 }
 
 
 function validateForm() {
-    // Töröljük az előző hibaüzeneteket
-    clearErrorMessages();
+    // Töröljük az előző hibaüzeneteket és keretszínezéseket
+    clearErrors();
+
+    // Ellenőrzés, hogy legalább egy radio button ki van-e választva
+    var radios = document.querySelectorAll('.radio-group input[type="radio"]');
+    var isAtLeastOneRadioChecked = Array.from(radios).some(radio => radio.checked);
+
+    if (!isAtLeastOneRadioChecked) {
+        highlightError('.radio-group', 'Legalább egy opció ki kell legyen választva!');
+        return false;
+    }
 
     // Ellenőrzés, hogy legalább egy checkbox ki van-e választva
-    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    var isChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+    var checkboxes = document.querySelectorAll('.checkbox-group input[type="checkbox"]');
+    var isAtLeastOneCheckboxChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
 
-    // Ha nincs kiemelt checkbox, akkor hibaüzenet
-    if (!isChecked) {
-        checkboxes.forEach(function(checkbox) {
-            checkbox.style.borderColor = 'red';
-        });
-        displayErrorMessage('Legalább egy opció ki kell legyen választva!');
+    if (!isAtLeastOneCheckboxChecked) {
+        highlightError('.checkbox-group', 'Legalább egy opció ki kell legyen választva!');
         return false;
     }
 
-    var radios = document.querySelectorAll('input[type="radio"]');
-    var isChoosen = Array.from(radios).some(radio => radio.checked);
-
-    // Ha nincs kiemelt radiobutton, akkor hibaüzenet
-    if (!isChoosen) {
-        radios.forEach(function(radio) {
-            radio.style.borderColor = 'red';
-        });
-        displayErrorMessage('Legalább egy opció ki kell legyen választva!');
-        return false;
-    }
-
-    var textInput = document.getElementById('textInput');
-    var isTextInputValid = textInput.value.trim() !== '';
-
-    // Ellenőrzés, hogy a szöveges mező nincs-e üres
-    if (!isTextInputValid) {
-        textInput.style.borderColor = 'red';
-        displayErrorMessage('A szöveges mező kitöltése kötelező!');
-        return false;
-    } else {
-        textInput.style.borderColor = ''; // Visszaállítjuk az eredeti keretszínt
-    }
-
-    // Egyéb validációk vagy logika
-
-    return isChecked && isTextInputValid && isChoosen;
+    return true;
 }
 
-function displayErrorMessage(message) {
-    // Hibaüzenet megjelenítése egy div elemben
-    var errorDiv = document.createElement('div');
-    errorDiv.className = 'error-message';
-    errorDiv.textContent = message;
-    document.body.appendChild(errorDiv);
+function highlightError(selector, message) {
+    // Hibaüzenet megjelenítése és keretszínezése
+    var container = document.querySelector(selector);
+    container.insertAdjacentHTML('beforeend', `<p class="error">${message}</p>`);
+    container.style.borderColor = 'red';
 }
 
-function clearErrorMessages() {
-    // Az összes hibaüzenet eltávolítása
-    var errorMessages = document.querySelectorAll('.error-message');
-    errorMessages.forEach(errorMessage => errorMessage.remove());
-}
+function clearErrors() {
+    // Az összes hibaüzenet és keretszínezés eltávolítása
+    var errors = document.querySelectorAll('.error');
+    errors.forEach(error => error.remove());
 
-    
+    var containers = document.querySelectorAll('.checkbox-group, .radio-group');
+    containers.forEach(container => container.style.borderColor = '');
+}

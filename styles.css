@@ -96,22 +96,3 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Elmosás és árnyékolás a kép körül */
     border-radius: 10px;
 }
-
-
-table {
-    width: 60%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    border: 2px solid #000000;
-    align-self: center;
-}
-
-th, td {
-    border: 1px solid #000000;
-    padding: 8px;
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2;
-}
