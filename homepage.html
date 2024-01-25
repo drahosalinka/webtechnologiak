@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Napsugár Kávéház</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        a {
+            color: purple; /* Alapértelmezett link szín */
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        /* Link hover állapot */
+        a:hover {
+            color: #e6079b;
+        }
+        
+        /* Látogatott link állapot */
+        a:visited {
+            color: yellowgreen; 
+        }
+        
+        .list-container {
+            text-align: left; /* A szöveg balra igazítása a listán belül */
+        }
+    </style>
 </head>
 
 <body>
@@ -21,7 +42,7 @@
                 <h2>Rólunk</h2>
                 <p>A Napsugár kávéház majdnem húsz évvel ezelőtt, 2384-ben nyitott meg, alapítónk: Drahos Alinka elképzeléseit követve. A cél egy olyan közösségi tér kialakítása volt,
                     ahova az emberek bátran ellátogathatnak és akár órákat is eltölthetnek a természetes fénnyel és növényekkel teli Kávéházban.</p>
-                <p><a href="menu.html">Állandó itallapunkon<a> található kávé- és üdítőital készítményeink húsz éve változatlan recept alapján készülnek, míg <a href="seasonal.html">Szezonális<a>
+                <p><a href="menu.html">Állandó itallapunkon</a> található kávé- és üdítőital készítményeink húsz éve változatlan recept alapján készülnek, míg <a href="seasonal.html">Szezonális</a>
                     lapunkon található termékeink mindig igyekeznek tükrözni az évszakok változását és vásárlóink ízlését.</p>
                 <p>Büszkén jelenthetjük be, hogy üzletünk már nyitásunk óta fajelfogadó hely, sőt, italjaink/süteményeink nagyrésze tündér és boszorkánymester munkatársaink nélkül nem létezne 
                     abban a formában, amiben ma is.</p>
@@ -37,6 +58,30 @@
                     <p>Péntek 07:00-19:00</p>
                     <p>Szombat-Vasárnap 09:00-21:00</p>
                 </p>
+            </div>
+
+            <div class="list-container">
+                <h2>Elnyert Díjaink</h2>
+                <ul>
+                    <li>2387 Kreatív Kávézó</li>
+                    <li>2390 Környezetbarát Vendéglátó hely</li>
+                    <li>2391 Legjobb Kávézó</li>
+                    <li>2392 Legjobb Kávézó</li>
+                    <li>2394 Legjobb Kávézó</li>
+                    <li>2395 Legjobb Kávézó</li>
+                    <li>2396 Legjobb Kávézó</li>
+                    <li>2398 Legjobb Kávézó</li>
+                    <li>2399 Legjobb Kávézó</li>
+                    <li>2400 Legjobb Kávézó</li>
+                </ul>
+            </div>
+            <div class="list-container">
+                <h2>Legkedveltebb italaink</h2>
+                <ol>
+                    <li>A szerencse itala (átlag 37 rendelés/nap)</li>
+                    <li>Karamell özön (átlag 31 rendelés/nap)</li>
+                    <li>Klasszikus kekszes latte (átlag 24 rendelés/nap)</li>
+                </ol>
             </div>
         </div>
     </div>
